@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "server": "supervisor backend/server.js"
+    "server": "nodemon backend/server.js",
+    "start": " node backend/server.js",
+    "build":"npm install && npm install--prefix frontend && npm run build --prefix frontend"
   },
   "type": "module",
   "author": "",
@@ -15,9 +17,10 @@
     "express": "^4.19.2",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.5.4",
-    "socket.io": "^4.7.5",
-    "supervisor": "^0.12.0"
+    "socket.io": "^4.7.5"
   },
-  "devDependencies": {},
-  "description": ""
+  "devDependencies": {
+  "nodemon":"^3.1.4"
+  }
+ 
 }
